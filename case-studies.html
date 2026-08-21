@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies — HexGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><span class="logo-hex">◈</span> HexGuard</a>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Get Audit</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <section class="page-header">
+        <div class="container">
+            <h1>Case Studies</h1>
+            <p>Real security assessments — challenges, findings, and solutions.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="case-grid">
+                <article class="case-card">
+                    <div class="case-number">#001</div>
+                    <h3>E-Commerce Platform Security Audit</h3>
+                    <div class="case-findings">
+                        <span class="finding critical">3 Critical</span>
+                        <span class="finding high">5 High</span>
+                        <span class="finding medium">2 Medium</span>
+                    </div>
+                    <p class="case-context"><strong>Context:</strong> A mid-size Indian e-commerce platform selling fashion products. ~10,000 daily users.</p>
+                    <p><strong>Key Findings:</strong> SQL injection in product search endpoint allowing database extraction. IDOR in order history allowing users to view other customers' orders. Weak session management — no HTTPOnly/Secure flags on cookies.</p>
+                    <p><strong>Impact:</strong> Potential data breach of 50,000+ customer records including addresses and phone numbers.</p>
+                    <p><strong>Remediation:</strong> Parameterized queries implemented, access controls added, session cookies hardened.</p>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Get Similar Audit →</a>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-number">#002</div>
+                    <h3>EdTech Startup VAPT</h3>
+                    <div class="case-findings">
+                        <span class="finding critical">1 Critical</span>
+                        <span class="finding high">3 High</span>
+                        <span class="finding medium">4 Medium</span>
+                    </div>
+                    <p class="case-context"><strong>Context:</strong> Fast-growing EdTech startup with web + mobile apps. 25,000+ registered students.</p>
+                    <p><strong>Key Findings:</strong> Server-Side Request Forgery (SSRF) in profile image upload. Broken authentication — JWT tokens not validated on server side. Mass assignment vulnerability in user update API.</p>
+                    <p><strong>Impact:</strong> SSRF could be chained to access internal AWS metadata endpoint. Authentication bypass would allow account takeover.</p>
+                    <p><strong>Remediation:</strong> Input validation on image URLs, JWT validation middleware added, API input sanitization.</p>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Get Similar Audit →</a>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-number">#003</div>
+                    <h3>Local Business Directory</h3>
+                    <div class="case-findings">
+                        <span class="finding critical">0 Critical</span>
+                        <span class="finding high">2 High</span>
+                        <span class="finding medium">6 Medium</span>
+                    </div>
+                    <p class="case-context"><strong>Context:</strong> A local business listing website for Tier-2 cities in India. Built on WordPress.</p>
+                    <p><strong>Key Findings:</strong> Stored XSS in business review section. CORS misconfiguration allowing cross-origin data access. Outdated WordPress plugins with known CVEs. Directory listing enabled on server.</p>
+                    <p><strong>Impact:</strong> XSS could steal admin session. Outdated plugins have public exploits available.</p>
+                    <p><strong>Remediation:</strong> Input sanitization for reviews, CORS header configuration, plugin updates, server hardening.</p>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Get Similar Audit →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (copy from index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo"><span class="logo-hex">◈</span> HexGuard</div>
+                    <p>Securing digital dreams. Professional cybersecurity services and training for Indian businesses and students.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="services.html">VAPT</a>
+                    <a href="services.html">Security Audit</a>
+                    <a href="services.html">Incident Response</a>
+                    <a href="courses.html">Training</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="contact.html">Get Help</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HexGuard. All rights reserved. Built with ❤️ for a secure India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
